@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+
+.btn {
+  height: 45px;
+  width: 100px;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: $primary-color;
+      border: $primary-border;
+    }
+  }
+
+  &.secondary {
+    background-color: white;
+    color: $secondary-color;
+    border: $secondary-border;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: white;
+      // border: $primary-border;
+    }
+  }
+}
