@@ -14,8 +14,6 @@ import {
   Form,
   Navbar,
   Nav,
-  NavDropdown,
-  Table
 } from "react-bootstrap";
 
 const App = () => {
@@ -36,10 +34,10 @@ const App = () => {
     firestore
       .collection("tasks")
       .get()
-      .then(data => {
-        setTasks(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+      .then((data) => {
+        setTasks(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
@@ -51,17 +49,17 @@ const App = () => {
         name: toDoInfo,
         start: toDoStartDate,
         due: toDoDueDate,
-        img: toDoImgUrl
+        img: toDoImgUrl,
       })
       .then(() => {
         fetchTodos();
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
 
-  const deleteTodo = id => {
+  const deleteTodo = (id) => {
     firestore
       .collection("tasks")
       .doc(id)
@@ -69,12 +67,12 @@ const App = () => {
       .then(() => {
         fetchTodos();
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
 
-  const updateTodo = id => {
+  const updateTodo = (id) => {
     firestore
       .collection("tasks")
       .doc(id)
@@ -82,7 +80,7 @@ const App = () => {
       .then(() => {
         fetchTodos();
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
@@ -94,23 +92,6 @@ const App = () => {
           <Navbar.Brand href="#home">Hello, I'm Lucian!</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
             <Nav>
               <Nav.Link href="#deets">Login</Nav.Link>
               <Nav.Link eventKey={2} href="#memes">
@@ -131,28 +112,30 @@ const App = () => {
                     placeholder="What to do?"
                     type="text"
                     value={toDoInfo}
-                    onChange={event => updateToDoInfo(event.target.value)}
+                    onChange={(event) => updateToDoInfo(event.target.value)}
                   />
 
                   <Form.Control
                     placeholder="When to start?"
                     type="text"
                     value={toDoStartDate}
-                    onChange={event => updateToDoStartDate(event.target.value)}
+                    onChange={(event) =>
+                      updateToDoStartDate(event.target.value)
+                    }
                   />
 
                   <Form.Control
                     placeholder="When to finish?"
                     type="text"
                     value={toDoDueDate}
-                    onChange={event => updateToDoDueDate(event.target.value)}
+                    onChange={(event) => updateToDoDueDate(event.target.value)}
                   />
 
                   <Form.Control
                     placeholder="Please insert an image URL!"
                     type="text"
                     value={toDoImgUrl}
-                    onChange={event => updateToDoImgUrl(event.target.value)}
+                    onChange={(event) => updateToDoImgUrl(event.target.value)}
                   />
                 </Form.Group>
                 <div class="col text-center">
@@ -171,14 +154,13 @@ const App = () => {
         </Container>
       </div>
       <section className={styles.test}>
-        {tasks.map(task => (
+        {tasks.map((task) => (
           <div className={styles.inside} key={task.id}>
-            {/* <p>{task.id}</p> */}
             <p>Name of the task: {task.name}</p>
             <p>Start date: {task.start}</p>
             <p>Finish date: {task.due}</p>
 
-            <img src={task.img} />
+            <img src={task.img} alt={task.name} />
 
             <div>
               <Button
@@ -195,7 +177,7 @@ const App = () => {
                 type="text"
                 className=" "
                 placeholder={task.name}
-                onChange={event => setUpdateTask(event.target.value)}
+                onChange={(event) => setUpdateTask(event.target.value)}
               ></input>
             </div>
             <div>

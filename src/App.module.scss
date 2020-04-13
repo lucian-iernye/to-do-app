@@ -22,7 +22,7 @@ body {
     color: white;
     border: 1px solid white;
     border-radius: 10px;
-    width: 85vw;
+    width: 75vw;
 
     p {
       word-break: break-all;
@@ -48,7 +48,7 @@ body {
 @media only screen and (min-width: 1024px) {
   .test {
     .inside {
-      width: 30vw;
+      width: 25vw;
       height: 70vh;
     }
   }
