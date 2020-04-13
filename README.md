@@ -1,4 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ⭐ Lucian Iernye - ToDo Web Application
+
+This application was created in React and Bootstrap. The added tasks are added into the database and from the database the data is fetched and it's displayed on the front-end.
+This application was created for the purpose or learning and practicing the CRUD operations.
+
+### [View the demo](https://to-do-app.lucianiernye.co.uk)
+
+## Instructions
+
+- Clone down the repository
+- Install the dependencies using the package managed (Yarn or NPM)
+- Start the app
+- Add a name for the task
+- Add a starting time for the task
+- Add a finish time for the task
+- Add a image URL for the task
+- To delete or edit a task use the delete respectively update task buttons.
 
 ## Available Scripts
 
@@ -37,32 +53,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Lucian Iernye](https://lucianiernye.co.uk)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is open source and available for collaboration.
